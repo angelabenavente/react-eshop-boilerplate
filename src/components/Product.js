@@ -6,11 +6,10 @@ import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
 import CardActions from '@mui/material/CardActions';
 import Collapse from '@mui/material/Collapse';
-import Avatar from '@mui/material/Avatar';
 import IconButton, { IconButtonProps } from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import {AddShoppingCart} from '@mui/icons-material'
-import { makeStyles } from '@mui/material';
+import { makeStyles } from "@mui/styles";
 import accounting from 'accounting';
 
 
@@ -64,13 +63,13 @@ export default function Product() {
             {accounting.formatMoney(50, "€")}
         </Typography>
       }
-        Title="Bolso Carolina Herrero"
-        Subheader="September 14, 2016"
+        title="Bolso Carolina Herrero"
+        subheader="September 14, 2016"
       />
       <CardMedia
         className={classes.media}
-        image="/static/images/cards/paella.jpg"
-        alt="Paella dish"
+        image= "https://media.istockphoto.com/id/1363767151/de/foto/gelbe-ledertasche-einer-isolierten-frau-auf-wei%C3%9Fem-hintergrund.jpg?s=1024x1024&w=is&k=20&c=i4e7MUMrezHBIYqBFCLqk6xwZDjrgOcgjiCi6ZT8gBc="
+        alt="Foto de bolso 1"
       />
       <CardContent>
         <Typography variant="body2" color="text.secondary">
