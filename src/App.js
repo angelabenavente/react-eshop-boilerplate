@@ -1,11 +1,12 @@
 import './App.css';
 import Product from './components/Product.js'
+import Navbar from './components/Navbar.js'
 
 function App() {
   return (
     <div className="App">
-     <h1>Esta es la tienda online de bolsos</h1>
-     <Product></Product>
+      <Navbar></Navbar>
+      <Product></Product>
     </div>
   );
 }

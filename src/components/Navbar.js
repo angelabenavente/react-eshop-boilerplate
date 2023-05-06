@@ -5,35 +5,35 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
 import { makeStyles } from "@mui/styles";
+import logo from "../assets/bagLogo.png"
 
 const useStyles = makeStyles((theme)=> ({
 
     root: {
-        maxWidth: 345, 
+        flexGrow: 1,
+        marginBottom: "4rem",
     },
 
-    action: {
-        marginTop: "3rem",
+    appBar: {
+        backgroundColor: "whitesmoke",
+        boxShadow: "none",
     },
 
-    media : {
-        height: 0,
-        paddingTop: '56.25%'
+    grow : {
+        flexGrow:1,  
     },
 
-    expand : {
-        transform: 'rotate (0deg)',
-        marginLeft: 'auto', 
-        transition: theme.transition.create('transform', {
-            duration: theme.transition.duration.shortest,
-        }),
+    button: {
+        marginLeft: "1px",
     },
 
-    expandOpen: {
-        transform: "rotate(180deg)",
+    image: {
+        marginRight: "1px",
+        width:"10%",
+        marginLeft: "-200px"
     },
+
 }));
 export default function Navbar() {
     const classes = useStyles()
@@ -41,16 +41,16 @@ export default function Navbar() {
   return (
     <div className = {classes.root}>
         <Box sx={{ flexGrow: 1 }}>
-            <AppBar position="static">
+            <AppBar position="fixed">
                 <Toolbar>
                 <IconButton
-                    size="large"
                     edge="start"
+                    className={classes.menuButton}
                     color="inherit"
                     aria-label="menu"
                     sx={{ mr: 2 }}
                 >
-                    <MenuIcon />
+                    <img src = {logo} className={classes.image}/>
                 </IconButton>
                 <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                     News

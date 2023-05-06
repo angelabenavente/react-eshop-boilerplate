@@ -32,15 +32,15 @@ const useStyles =makeStyles((theme)=> ({
     expand : {
         transform: 'rotate (0deg)',
         marginLeft: 'auto', 
-        transition: theme.transition.create('transform', {
-            duration: theme.transition.duration.shortest,
-        }),
+        // transition: theme.transition.create('transform', {
+        //     duration: theme.transition.duration.shortest,
+        // },
     },
 
     expandOpen: {
         transform: "rotate(180deg)",
     },
-}));
+})); 
 
 export default function Product() {
   const classes= useStyles();
