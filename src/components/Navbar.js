@@ -6,7 +6,9 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import { makeStyles } from "@mui/styles";
-import logo from "../assets/bagLogo.png"
+import logo from "../assets/bagLogo.png";
+import {ShoppingCart} from '@mui/icons-material';
+import Badge from '@mui/material/Badge';
 
 const useStyles = makeStyles((theme)=> ({
 
@@ -15,24 +17,29 @@ const useStyles = makeStyles((theme)=> ({
         marginBottom: "4rem",
     },
 
+    grow:{
+        flexGrow:1,
+    },
+
     appBar: {
         backgroundColor: "whitesmoke",
         boxShadow: "none",
+        color: "rgb(255, 141, 141)",
     },
 
-    grow : {
-        flexGrow:1,  
-    },
 
     button: {
         marginLeft: "1px",
     },
 
     image: {
-        marginRight: "1px",
-        width:"10%",
-        marginLeft: "-200px"
+        height: "3rem",
+        color: "white",
     },
+
+    title: {
+        fontFamily: "Lucida Console",
+    }
 
 }));
 export default function Navbar() {
@@ -45,17 +52,23 @@ export default function Navbar() {
                 <Toolbar>
                 <IconButton
                     edge="start"
+                    alt= 'bagLogo'
                     className={classes.menuButton}
-                    color="inherit"
-                    aria-label="menu"
-                    sx={{ mr: 2 }}
                 >
                     <img src = {logo} className={classes.image}/>
                 </IconButton>
-                <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                    News
+
+                <div className={classes.grow}/>
+                <Typography variant="h6" component="p"  className={classes.title} >
+                    Bolsos Lola
                 </Typography>
-                <Button color="inherit">Login</Button>
+                <div className={classes.button}/>
+                    <Button color="inherit">Sign In</Button>
+                    <IconButton aria-label="show cart items" color ='inherit'>
+                        <Badge badgeContent= {2} color= "secondary">
+                            <ShoppingCart fontsize="large"/>
+                        </Badge>
+                    </IconButton>
                 </Toolbar>
             </AppBar>
         </Box>
