@@ -6,7 +6,7 @@ export default [
         productType: "En Stock",
         price: 200,
         rating: 5,
-        image: "https://media.istockphoto.com/id/1363767151/de/foto/gelbe-ledertasche-einer-isolierten-frau-auf-wei%C3%9Fem-hintergrund.jpg?s=1024x1024&w=is&k=20&c=i4e7MUMrezHBIYqBFCLqk6xwZDjrgOcgjiCi6ZT8gBc=",
+        image: "https://cdn.lamartina.com.filoblu.com/rx/917x,ofmt_webp,allfmt/media/catalog/product/4/1/41V079W21AALB026TU_01.jpg",
         description: "Ideal para la nueva temporada de verano."
     },
 
@@ -22,11 +22,11 @@ export default [
 
     {
         id:3,
-        name: "Fendi",
+        name: "Lola Casademund",
         productType: "En Stock",
         price: 200,
         rating: 4,
-        image: "https://m.media-amazon.com/images/I/51wUeaRp-6L._UY395_.jpg",
+        image: "https://media.lolacasademunt.com/20150-category_default/bolso-efecto-metalizado-logo.jpg",
         description: "Ideal para la nueva temporada de verano."
     },
 

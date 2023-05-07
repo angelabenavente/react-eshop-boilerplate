@@ -9,6 +9,8 @@ import { makeStyles } from "@mui/styles";
 import logo from "../assets/bagLogo.png";
 import {ShoppingCart} from '@mui/icons-material';
 import Badge from '@mui/material/Badge';
+import {NavLink} from "react-router-dom";
+import {useStateValue} from '../StateProvider';
 
 const useStyles = makeStyles((theme)=> ({
 
@@ -42,33 +44,37 @@ const useStyles = makeStyles((theme)=> ({
     }
 
 }));
-export default function Navbar() {
+export  function Navbar() {
     const classes = useStyles()
-    
+    const [{basket}, dispatch] = useStateValue(); 
+
   return (
     <div className = {classes.root}>
         <Box sx={{ flexGrow: 1 }}>
             <AppBar position="fixed">
                 <Toolbar>
-                <IconButton
-                    edge="start"
-                    alt= 'bagLogo'
-                    className={classes.menuButton}
-                >
-                    <img src = {logo} className={classes.image}/>
-                </IconButton>
-
+                <NavLink to= "/" exact>
+                    <IconButton
+                        edge="start"
+                        alt= 'bagLogo'
+                        className={classes.menuButton}
+                    >
+                        <img src = {logo} className={classes.image}/>
+                    </IconButton>
+                </NavLink>
+                
                 <div className={classes.grow}/>
                 <Typography variant="h6" component="p"  className={classes.title} >
                     Bolsos Lola
                 </Typography>
                 <div className={classes.button}/>
-                    <Button color="inherit">Sign In</Button>
-                    <IconButton aria-label="show cart items" color ='inherit'>
-                        <Badge badgeContent= {2} color= "secondary">
-                            <ShoppingCart fontsize="large"/>
-                        </Badge>
-                    </IconButton>
+                    <NavLink to="/checkout-page" exact>
+                        <IconButton aria-label="show cart items" color ='inherit'>
+                            <Badge badgeContent= {basket?.length} color= "secondary">
+                                <ShoppingCart fontsize="large"/>
+                            </Badge>
+                        </IconButton>
+                    </NavLink>
                 </Toolbar>
             </AppBar>
         </Box>

@@ -8,6 +8,9 @@ import Typography from '@mui/material/Typography';
 import { makeStyles } from "@mui/styles";
 import accounting from 'accounting';
 import DeleteIcon from '@mui/icons-material/Delete';
+import { useStateValue } from '../StateProvider';
+import { actionTypes } from '../reducer';
+import { dispatch } from 'redux';
 
 
 
@@ -28,21 +31,38 @@ const useStyles =makeStyles((theme)=> ({
 
 
     cardActions:{
-        displax: "flex",
+        display: "flex",
         justifyContent : "space-between",
         textAlign: "center",
     },
 
     cardRating:{
-      displax: "flex",
+      display: "flex",
     },
+
+  
 })); 
 
 export default function CheckoutCard({
     product: {id, name, productType, image, price, rating, description},
 }) {
   const classes= useStyles();
+  const [{basket}, dispatch] = useStateValue(); 
 
+  const removeItem = () => 
+  {
+    dispatch({
+
+        type: actionTypes.REMOVE_ITEM,
+          id: id, 
+          name: name, 
+          productType: productType,
+          image: image, 
+          price: price, 
+          rating: rating, 
+          description: description,
+    })
+  }
   return (
     <Card className= {classes.root}>
       <CardHeader
@@ -73,7 +93,7 @@ export default function CheckoutCard({
                 ))}
             </div>
         <IconButton>
-            <DeleteIcon font-size="large"></DeleteIcon>
+            <DeleteIcon font-size="large" onClick= {removeItem} ></DeleteIcon>
         </IconButton>
         
       </CardActions>

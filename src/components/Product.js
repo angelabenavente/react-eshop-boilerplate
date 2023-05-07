@@ -4,15 +4,14 @@ import CardHeader from '@mui/material/CardHeader';
 import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
 import CardActions from '@mui/material/CardActions';
-import Collapse from '@mui/material/Collapse';
 import IconButton, { IconButtonProps } from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import {AddShoppingCart} from '@mui/icons-material'
 import { makeStyles } from "@mui/styles";
 import accounting from 'accounting';
-
-
-
+import { dispatch } from 'redux';
+import { actionTypes } from '../reducer';
+import { useStateValue } from '../StateProvider';
 
 const useStyles =makeStyles((theme)=> ({
 
@@ -32,13 +31,25 @@ const useStyles =makeStyles((theme)=> ({
 
 export default function Product({product: {id, name, productType, image, price, rating, description}}) {
   const classes= useStyles();
-  const [expanded,setExpanded] = React.useState(false);
+  const [{basket}, dispatch] = useStateValue(); 
 
-  const handleExpandClick = () =>
+  const addToBasket = () => 
   {
-    setExpanded(!expanded);
-  }
+    dispatch({
 
+        type: actionTypes.ADD_TO_BASKET,
+        item: {
+          id: id, 
+          name: name, 
+          productType: productType,
+          image: image, 
+          price: price, 
+          rating: rating, 
+          description: description,
+        }
+
+    })
+  }
   return (
     <Card className= {classes.root}>
       <CardHeader
@@ -60,7 +71,7 @@ export default function Product({product: {id, name, productType, image, price, 
       />
 
       <CardActions disableSpacing>
-        <IconButton aria-label="Add to Cart">
+        <IconButton aria-label="Add to Cart" onClick={addToBasket}>
           <AddShoppingCart fontSize= 'large'/>
         </IconButton>
         <IconButton aria-label="share">

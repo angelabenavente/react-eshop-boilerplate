@@ -2,11 +2,10 @@ import * as React from 'react';
 import { makeStyles } from "@mui/styles";
 import Grid from '@mui/material/Grid';
 import { Typography } from '@mui/material';
-//import {useStateValue} from "../StateProvider";
+import {useStateValue} from "../StateProvider";
 import CheckoutCard from "./CheckoutCard";
-import products from './productData.js';
 import Total from './Total';
-
+import { dispatch } from 'redux';
 
 const useStyles = makeStyles ((theme) => 
 ({
@@ -16,9 +15,9 @@ const useStyles = makeStyles ((theme) =>
     },
 }));
 
-const CheckOutPage = () =>{
+export  function CheckOutPage (){
     const classes = useStyles(); 
-    //const [{basket}, dispatch] = useStateValue(); 
+    const [{basket}, dispatch] = useStateValue(); 
 
     //--Grid included in other grid.--
 
@@ -26,10 +25,10 @@ const CheckOutPage = () =>{
 
         return(
             <React.Fragment>
-                {products?.map (product=>(
+                {basket?.map ((item)=>(
                     <Grid item xs={12} sm={8} md={6} lg={4}>
                         <CheckoutCard
-                            key={product.id} product= {product}
+                            key={item.id} product= {item}
                         />
                     </Grid>
                 ))}
@@ -60,4 +59,3 @@ const CheckOutPage = () =>{
     ); 
 };
 
-export default CheckOutPage;

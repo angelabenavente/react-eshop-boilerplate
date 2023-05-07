@@ -1,12 +1,10 @@
 //It contains all the products. It will have several "Product.js". 
 //Functionality: Grid. 
-
 import * as React from 'react';
 import Grid from '@mui/material/Grid';
 import Product from "./Product.js"
 import { makeStyles } from "@mui/styles";
 import products from "./productData.js"
-
 const useStyles =makeStyles((theme)=> ({
 
     root: {
@@ -15,7 +13,7 @@ const useStyles =makeStyles((theme)=> ({
 })); 
 
 
-export default function Products() {
+export  function Products() {
 
     const classes= useStyles();
 
