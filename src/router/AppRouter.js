@@ -5,6 +5,7 @@ import { Products } from '../components/Products.js';
 import {Navbar} from '../components/Navbar.js';
 import {Footer} from '../components/Footer.js';
 import {UsePagination} from '../components/UsePagination.js';
+import {HomePage} from '../components/HomePage.js';
 
 
 export default function AppRouter() {
@@ -14,7 +15,8 @@ export default function AppRouter() {
             <div>
                 <Navbar></Navbar>
                 <Routes>
-                    <Route exact path="/" element={<Products/>}/>
+                    <Route exact path="/" element={<HomePage/>}/>
+                    <Route exact path="/products" element={<Products/>}/>
                     <Route exact path="/checkout-page" element={<CheckOutPage/>} />
                 </Routes>
                 <UsePagination/>

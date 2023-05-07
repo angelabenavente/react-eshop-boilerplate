@@ -63,6 +63,7 @@ export  function Navbar() {
                     </IconButton>
                 </NavLink>
                 
+
                 <div className={classes.grow}/>
                 <Typography variant="h6" component="p"  className={classes.title} >
                     Bolsos Lola
