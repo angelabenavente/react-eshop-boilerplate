@@ -4,9 +4,9 @@ import Grid from '@mui/material/Grid';
 import { Typography } from '@mui/material';
 //import {useStateValue} from "../StateProvider";
 import CheckoutCard from "./CheckoutCard";
-//import Total from "./Total";
-import { Check } from '@mui/icons-material';
 import products from './productData.js';
+import Total from './Total';
+
 
 const useStyles = makeStyles ((theme) => 
 ({
@@ -52,7 +52,7 @@ const CheckOutPage = () =>{
                 </Grid>
                 <Grid item xs={12} sm={4} md={3}>
                     <Typography align='center' gutterBottom variant="h5">
-                        {/* <Total></Total> */}
+                        <Total></Total> 
                     </Typography>
                 </Grid>
             </Grid>

@@ -24,15 +24,6 @@ const useStyles =makeStyles((theme)=> ({
         marginTop: "3rem",
     },
 
-    expand : {
-        transform: 'rotate (0deg)',
-        marginLeft: 'auto', 
-    },
-
-    expandOpen: {
-        transform: "rotate(180deg)",
-    },
-
     image: {
       height: "10rem",
       paddingTop: '56.25%'
