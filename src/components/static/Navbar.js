@@ -7,11 +7,11 @@ import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import Icon from '@mui/material/Icon';
 import { makeStyles } from "@mui/styles";
-import logo from "../assets/bagLogo.png";
+import logo from "../../assets/bagLogo.png";
 import {ImportContactsSharp, ShoppingCart} from '@mui/icons-material';
 import Badge from '@mui/material/Badge';
 import {NavLink} from "react-router-dom";
-import {useStateValue} from '../StateProvider';
+import {useStateValue} from '../../StateProvider';
 
 const useStyles = makeStyles((theme)=> ({
 

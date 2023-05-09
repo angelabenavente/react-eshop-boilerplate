@@ -6,7 +6,7 @@ import {
   Column,
   FooterLink,
   Heading,
-} from "./styles/FooterStyles";
+} from "../styles/FooterStyles";
 import { Typography } from '@mui/material';
 
 export  function Footer () {

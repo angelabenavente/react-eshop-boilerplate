@@ -1,11 +1,11 @@
 import React from 'react';
 import {BrowserRouter, Routes, Route} from "react-router-dom";
-import { CheckOutPage } from '../components/ChekcoutPage.js';
-import { Products } from '../components/Products.js';
-import {Navbar} from '../components/Navbar.js';
-import {Footer} from '../components/Footer.js';
-import {HomePage} from '../components/HomePage.js';
-import { ContactPage } from "../components/ContactPage.js";
+import { CheckOutPage } from '../components/views/ChekcoutPage.js';
+import { Products } from '../components/views/Products.js';
+import {Navbar} from '../components/static/Navbar.js';
+import {Footer} from '../components/static/Footer.js';
+import {HomePage} from '../components/views/HomePage.js';
+import { ContactPage } from "../components/views/ContactPage.js";
 
 
 export default function AppRouter() {

@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Container } from '@mui/material';
 import Box from '@mui/material/Box';
 import IconButton from '@mui/material/IconButton';
-import handBagInitial from '../assets/handbag.png';
+import handBagInitial from '../../assets/bagLogo.png';
 import { makeStyles } from "@mui/styles";
 import {NavLink} from "react-router-dom";
 

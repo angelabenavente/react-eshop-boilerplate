@@ -3,8 +3,6 @@ import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import { makeStyles } from "@mui/styles";
 import Button from '@mui/material/Button';
-import Icon from '@mui/material/Icon';
-import handBagInitial from '../assets/handbag.png';
 import Grid from '@mui/material/Grid';
 import { Typography } from '@mui/material';
 
