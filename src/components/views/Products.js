@@ -2,10 +2,10 @@
 //Functionality: Grid. 
 import * as React from 'react';
 import Grid from '@mui/material/Grid';
-import Product from "../Product.js"
+import Product from "../source/Product.js"
 import { makeStyles } from "@mui/styles";
-import products from "../productData.js";
-import {UsePagination} from '../UsePagination.js';
+import products from "../data/productData.js";
+import {UsePagination} from '../static/UsePagination.js';
 
 const useStyles =makeStyles((theme)=> ({
 
@@ -22,7 +22,7 @@ export  function Products() {
   return (
 
     <div className={classes.root}>
-         <Grid container spacing={2}>
+         <Grid container spacing={3}>
           {
               products.map( product=> (
                 <Grid item xs={12} sm={6} lg={3}>

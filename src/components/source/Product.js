@@ -10,8 +10,8 @@ import {AddShoppingCart} from '@mui/icons-material'
 import { makeStyles } from "@mui/styles";
 import accounting from 'accounting';
 import { dispatch } from 'redux';
-import { actionTypes } from '../reducer';
-import { useStateValue } from '../StateProvider';
+import { actionTypes } from '../../reducer';
+import { useStateValue } from '../../StateProvider';
 
 const useStyles =makeStyles((theme)=> ({
 

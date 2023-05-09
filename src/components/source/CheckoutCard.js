@@ -8,8 +8,8 @@ import Typography from '@mui/material/Typography';
 import { makeStyles } from "@mui/styles";
 import accounting from 'accounting';
 import DeleteIcon from '@mui/icons-material/Delete';
-import { useStateValue } from '../StateProvider';
-import { actionTypes } from '../reducer';
+import { useStateValue } from '../../StateProvider';
+import { actionTypes } from '../../reducer';
 import { dispatch } from 'redux';
 
 

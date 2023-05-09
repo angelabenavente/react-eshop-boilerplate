@@ -3,8 +3,8 @@ import { makeStyles } from "@mui/styles";
 import Grid from '@mui/material/Grid';
 import { Typography } from '@mui/material';
 import {useStateValue} from "../../StateProvider";
-import CheckoutCard from "../CheckoutCard";
-import Total from '../Total';
+import CheckoutCard from "../source/CheckoutCard";
+import Total from '../source/Total';
 import { dispatch } from 'redux';
 
 const useStyles = makeStyles ((theme) => 

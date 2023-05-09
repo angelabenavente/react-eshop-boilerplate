@@ -12,6 +12,7 @@ import {ImportContactsSharp, ShoppingCart} from '@mui/icons-material';
 import Badge from '@mui/material/Badge';
 import {NavLink} from "react-router-dom";
 import {useStateValue} from '../../StateProvider';
+import LikeReview from '../source/LikeReviews';
 
 const useStyles = makeStyles((theme)=> ({
 
@@ -68,7 +69,9 @@ export  function Navbar() {
                 </IconButton>
                 </NavLink>
                 </div>
-
+                <div>
+                <LikeReview></LikeReview>
+                </div>
                 <div className={classes.grow}/>
                 <NavLink to= "/contact-form" exact>
                 <IconButton variant="h6" component="p"  className={classes.title} >
