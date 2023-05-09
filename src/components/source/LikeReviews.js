@@ -10,20 +10,20 @@ const LikeReview = ()=> {
     const [currentCountLikes, setCountLike] = useState(0);
     
     useEffect(()=> {
-       console.log("Gracias por su valoracion positiva")
-    }, currentCountLikes); 
+    console.log("Gracias por su valoracion positiva", currentCountLikes)
+    }, [currentCountLikes]); 
 
     return(
         <div>
-             
-            <IconButton>
-                <ThumbUpIcon>
-                    <button onClick={() => setCountLike(currentCountLikes + 1)}></button>
+              <button onClick={() => {setCountLike(currentCountLikes + 1); console.log("onclick", currentCountLikes + 1)}} backgroundColor= "#1976d2"  background-color= "#1976d2">
+              <IconButton>
+                <ThumbUpIcon> 
                 </ThumbUpIcon> 
-                <b>{currentCountLikes}</b>
             </IconButton>
-        </div>
-           
+              </button>
+            
+            <b>{currentCountLikes}</b>
+        </div> 
     );
 };
 
