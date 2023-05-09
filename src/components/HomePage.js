@@ -37,14 +37,14 @@ export function HomePage() {
   const classes = useStyles()
   return (
         <Box className= {classes.root}>
-          <Container>
+          <div>
           <NavLink to= "/products" exact>
             <IconButton>
               <img src = {handBagInitial} className={classes.image}/>
             </IconButton>
-            <p className={classes.text}> Encontrar mi bolso </p>
             </NavLink>
-          </Container>
+            <p className={classes.text}> Encontrar mi bolso </p>
+          </div>
         </Box>
     )
   }

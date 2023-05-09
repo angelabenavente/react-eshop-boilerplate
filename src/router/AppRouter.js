@@ -4,8 +4,8 @@ import { CheckOutPage } from '../components/ChekcoutPage.js';
 import { Products } from '../components/Products.js';
 import {Navbar} from '../components/Navbar.js';
 import {Footer} from '../components/Footer.js';
-import {UsePagination} from '../components/UsePagination.js';
 import {HomePage} from '../components/HomePage.js';
+import { ContactPage } from "../components/ContactPage.js";
 
 
 export default function AppRouter() {
@@ -18,8 +18,8 @@ export default function AppRouter() {
                     <Route exact path="/" element={<HomePage/>}/>
                     <Route exact path="/products" element={<Products/>}/>
                     <Route exact path="/checkout-page" element={<CheckOutPage/>} />
+                    <Route exact path="/contact-form" element={<ContactPage/>} />
                 </Routes>
-                <UsePagination/>
                 <Footer/>
             </div>
         </BrowserRouter> 

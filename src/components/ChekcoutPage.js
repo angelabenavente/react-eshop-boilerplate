@@ -41,7 +41,7 @@ export  function CheckOutPage (){
         <div className = {classes.root}>
             <Grid container spacing={3}>
                 <Grid item xs={12}>
-                    <Typography align= 'center' gutterBottom variant="h5">
+                    <Typography align= 'center' gutterBottom variant="h4">
                         Carrito de la compra
                     </Typography>
                 </Grid>

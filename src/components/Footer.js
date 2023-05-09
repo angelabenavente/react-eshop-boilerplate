@@ -7,19 +7,21 @@ import {
   FooterLink,
   Heading,
 } from "./styles/FooterStyles";
-  
+import { Typography } from '@mui/material';
+
 export  function Footer () {
   return (
     <Box>
       <h1 style={{ color: "white", 
                    textAlign: "center", 
-                   marginTop: "-50px" }}>
+                   marginTop: "-50px", 
+                   marginLeft: "-100px"}}>
         Bolsos Lola: Encuentra tu complemento para cada ocasión.
       </h1>
       <Container>
         <Row>
           <Column>
-            <Heading>Acerca de nosotros</Heading>
+            <Heading>Nosotros</Heading>
             <FooterLink href="#">Tiendas</FooterLink>
           </Column>
           <Column>
@@ -29,7 +31,7 @@ export  function Footer () {
           </Column>
           <Column>
             <Heading>Contáctanos</Heading>
-            <FooterLink href="#">Lola Martín</FooterLink>
+            <FooterLink href="/contact-form">Formulario</FooterLink>
           </Column>
           <Column>
             <Heading>Redes sociales</Heading>

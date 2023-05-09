@@ -4,7 +4,9 @@ import * as React from 'react';
 import Grid from '@mui/material/Grid';
 import Product from "./Product.js"
 import { makeStyles } from "@mui/styles";
-import products from "./productData.js"
+import products from "./productData.js";
+import {UsePagination} from '../components/UsePagination.js';
+
 const useStyles =makeStyles((theme)=> ({
 
     root: {
@@ -29,6 +31,7 @@ export  function Products() {
               ))
           }
       </Grid>
+      <UsePagination/>
     </div>
      
   );

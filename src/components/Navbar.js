@@ -5,9 +5,10 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
+import Icon from '@mui/material/Icon';
 import { makeStyles } from "@mui/styles";
 import logo from "../assets/bagLogo.png";
-import {ShoppingCart} from '@mui/icons-material';
+import {ImportContactsSharp, ShoppingCart} from '@mui/icons-material';
 import Badge from '@mui/material/Badge';
 import {NavLink} from "react-router-dom";
 import {useStateValue} from '../StateProvider';
@@ -35,12 +36,12 @@ const useStyles = makeStyles((theme)=> ({
     },
 
     image: {
-        height: "3rem",
+        height: "100%",
         color: "white",
     },
 
     title: {
-        fontFamily: "Lucida Console",
+        color: "white"+'!important',
     }
 
 }));
@@ -53,25 +54,31 @@ export  function Navbar() {
         <Box sx={{ flexGrow: 1 }}>
             <AppBar position="fixed">
                 <Toolbar>
-                <NavLink to= "/" exact>
-                    <IconButton
+                    <Icon
                         edge="start"
                         alt= 'bagLogo'
                         className={classes.menuButton}
                     >
                         <img src = {logo} className={classes.image}/>
-                    </IconButton>
+                    </Icon>
+                <div>
+                <NavLink to= "/" exact>
+                <IconButton variant="h5" component="p"  important className={classes.title} >
+                    Bolsos Lola
+                </IconButton>
                 </NavLink>
-                
+                </div>
 
                 <div className={classes.grow}/>
-                <Typography variant="h6" component="p"  className={classes.title} >
-                    Bolsos Lola
-                </Typography>
+                <NavLink to= "/contact-form" exact>
+                <IconButton variant="h6" component="p"  className={classes.title} >
+                    Servicio 24h
+                </IconButton>
+                </NavLink>
                 <div className={classes.button}/>
                     <NavLink to="/checkout-page" exact>
-                        <IconButton aria-label="show cart items" color ='inherit'>
-                            <Badge badgeContent= {basket?.length} color= "secondary">
+                        <IconButton aria-label="show cart items" color= "#fdd9f8">
+                            <Badge badgeContent= {basket?.length} color= "primary">
                                 <ShoppingCart fontsize="large"/>
                             </Badge>
                         </IconButton>
