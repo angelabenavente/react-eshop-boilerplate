@@ -32,7 +32,7 @@ export default [
 
     {
         id:4,
-        name: "Hermes",
+        name: "Prada",
         productType: "En Stock",
         price: 200,
         rating: 4,
@@ -52,7 +52,7 @@ export default [
 
     {
         id:6,
-        name: "Carolina Herrero",
+        name: "Moma",
         productType: "En Stock",
         price: 200,
         rating: 4,
@@ -72,7 +72,7 @@ export default [
 
     {
         id:8,
-        name: "Carolina Herrero",
+        name: "Christian Dior",
         productType: "En Stock",
         price: 200,
         rating: 3,
@@ -82,7 +82,7 @@ export default [
 
     {
         id:9,
-        name: "Carolina Herrero",
+        name: "Fendi",
         productType: "En Stock",
         price: 200,
         rating: 3,
