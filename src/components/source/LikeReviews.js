@@ -15,11 +15,11 @@ const LikeReview = ()=> {
 
     return(
         <div>
-              <button onClick={() => {setCountLike(currentCountLikes + 1); console.log("onclick", currentCountLikes + 1)}} backgroundColor= "#1976d2"  background-color= "#1976d2">
+              <button backgroundColor= "#1976d2 !important" onClick={() => {setCountLike(currentCountLikes + 1); console.log("onclick", currentCountLikes + 1)}} >
               <IconButton>
                 <ThumbUpIcon> 
                 </ThumbUpIcon> 
-            </IconButton>
+            </IconButton>\
               </button>
             
             <b>{currentCountLikes}</b>
