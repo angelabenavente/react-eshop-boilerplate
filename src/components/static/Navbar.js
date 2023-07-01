@@ -64,7 +64,9 @@ export  function Navbar() {
                     </Icon>
                 <div>
                 <NavLink to= "/" exact>
-                <IconButton variant="h5" component="p"  important className={classes.title} >
+                <IconButton variant="h5" 
+                            component="p"  
+                            important className={classes.title} >
                     Bolsos Lola
                 </IconButton>
                 </NavLink>
@@ -74,7 +76,9 @@ export  function Navbar() {
                 </div>
                 <div className={classes.grow}/>
                 <NavLink to= "/contact-form" exact>
-                <IconButton variant="h6" component="p"  className={classes.title} >
+                <IconButton variant="h6" 
+                            component="p"  
+                            className={classes.title} >
                     Servicio 24h
                 </IconButton>
                 </NavLink>

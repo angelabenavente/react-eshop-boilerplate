@@ -8,14 +8,27 @@ import {
   Heading,
 } from "../styles/FooterStyles";
 import { Typography } from '@mui/material';
+import { makeStyles } from "@mui/styles";
+
+const useStyles = makeStyles((theme)=> ({
+
+  root: {
+      flexGrow: 1,
+      marginBottom: "4rem",
+      color: "white", 
+      textAlign: "center", 
+      marginTop: "-50px", 
+      marginLeft: "-100px"
+  },
+
+ 
+}));
 
 export  function Footer () {
+  const classes = useStyles()
   return (
     <Box>
-      <h1 style={{ color: "white", 
-                   textAlign: "center", 
-                   marginTop: "-50px", 
-                   marginLeft: "-100px"}}>
+      <h1 className={classes.root}>
         Bolsos Lola: Encuentra tu complemento para cada ocasión.
       </h1>
       <Container>
