@@ -1,0 +1,11 @@
+.viewContainer {
+  display: flex;
+}
+
+.leftSideBar {
+  border-right: 1px solid grey;
+}
+
+.rightSideBar {
+  border-left: 1px solid grey;
+}

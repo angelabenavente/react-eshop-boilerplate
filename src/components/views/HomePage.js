@@ -1,52 +1,46 @@
-import * as React from 'react';
-import { Container } from '@mui/material';
-import Box from '@mui/material/Box';
-import IconButton from '@mui/material/IconButton';
-import handBagInitial from '../../assets/handbag.png';
+import Box from "@mui/material/Box";
+import IconButton from "@mui/material/IconButton";
 import { makeStyles } from "@mui/styles";
+import React from "react";
 import { NavLink } from "react-router-dom";
+import handBagInitial from "../../assets/handbag.png";
 
-
-const useStyles = makeStyles((theme)=> ({
+const useStyles = makeStyles((theme) => ({
   root: {
-     width: "100%",
-     height: "400px",
-     backgroundColor: '#fdd9f8',
+    width: "100%",
+    height: "400px",
+    backgroundColor: "#fdd9f8",
   },
 
   image: {
-
-      textAlign: "center",
-      display: "block",
-      justifyContent: "center",
-      alignItems: "center",
-      margin: "auto",
-      width: "65%",
-
+    textAlign: "center",
+    display: "block",
+    justifyContent: "center",
+    alignItems: "center",
+    margin: "auto",
+    width: "65%",
   },
 
-   text: {
+  text: {
     height: "10rem",
     marginLeft: "200px",
-    fontFamily: 'Myriad Pro Regular',
+    fontFamily: "Myriad Pro Regular",
   },
-
-})); 
+}));
 
 export function HomePage() {
-  const classes = useStyles()
+  const classes = useStyles();
+
   return (
-        <Box className= {classes.root}>
-          <div>
-          <NavLink to= "/products" exact>
-            <IconButton>
-              <img src = {handBagInitial} className={classes.image}/>
-            </IconButton>
-            </NavLink>
-            <p className={classes.text}> Encontrar mi bolso </p>
-          </div>
-        </Box>
-    )
-  }
-
-
+    <Box className={classes.root}>
+      <div>
+        <NavLink to="/contact-form" exact>
+          <IconButton>
+            <img src={handBagInitial} className={classes.image} />
+          </IconButton>
+        </NavLink>
+        <p className={classes.text}> Encontrar mi bolso </p>
+      </div>
+    </Box>
+  );
+}
