@@ -65,6 +65,9 @@ export function ContactPage() {
           <div>
           <Button variant="contained">Mandar petición</Button>
           </div>
+          <div>
+          <Button variant="contained">Resetear petición</Button>
+          </div>
           </Box>
       </Grid>
   );

@@ -6,7 +6,7 @@ import {Navbar} from '../components/static/Navbar.js';
 import {Footer} from '../components/static/Footer.js';
 import {HomePage} from '../components/views/HomePage.js';
 import { ContactPage } from "../components/views/ContactPage.js";
-import {Sidebar} from '../components/sidebar/Sidebar.js';
+//import {Sidebar} from '../components/sidebar/Sidebar.js';
 
 
 export default function AppRouter() {
@@ -14,7 +14,7 @@ export default function AppRouter() {
     return(
         <BrowserRouter>
             <div>
-                <Header></Header>
+                {/* <Header></Header> */}
                 <Navbar></Navbar>
                 <Routes>
                     <Route exact path="/" element={<HomePage/>}/>
